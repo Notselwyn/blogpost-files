@@ -1,0 +1,15 @@
+[Unit]
+Description=Ksmbd
+After=network.target
+StartLimitIntervalSec=0
+Type=simple
+Restart=always
+RestartSec=1
+
+[Service]
+User=root
+Group=root
+ExecStart=/root/start_ksmbd.sh
+
+[Install]
+WantedBy=multi-user.target
